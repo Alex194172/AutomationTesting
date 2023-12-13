@@ -1,14 +1,4 @@
-// This test scenario is for testing the login (Blocked by Captcha)
-// Steps to reproduce : 
-// 1.Visit the page www.emag.ro 
-// 2.Select the log in button
-// 3.Type the email 
-// 4.Click on confirm
-// 5.Type the password
-// 6.Click confirm 
-// 7.Click to skip the phone registration
-
-
+//Test case 6: This test scenario is for testing the login (Blocked by Captcha)
 describe('eMag website log-in', () => {
 it('should log in, skip phone number', () => {
 //Visit eMag webiste  
@@ -26,6 +16,3 @@ cy.get('a.text-center.font-weight-semibold').should('exist');
 cy.get('a.text-center.font-weight-semibold').click();
 });
 });
-
-
-
