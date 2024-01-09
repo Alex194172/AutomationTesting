@@ -1,16 +1,5 @@
-Cypress.Commands.add('visitEmag', () => {
-    cy.visit('https://www.emag.ro/');
-  
-    // Handle cookie consent if it exists
-    cy.wait(5000);
-    cy.get('.js-accept').click();
-  
-    // Handle pop-up for sign-in
-    cy.wait(5000);
-    cy.get('.js-dismiss-login-notice-btn').click();
-
-    // verify that the url is loaded 
-    cy.url().should('include', 'www.emag.ro');
+Cypress.Commands.add('visitSite', (url) => {
+    cy.visit(url);
   });
 
 Cypress.Commands.add('addToBasket', () => {
